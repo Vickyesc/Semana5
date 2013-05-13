@@ -2,17 +2,18 @@
 and may not be redistributed without written permission.*/
 
 //The headers
-#include "SDL/SDL.h"
-#include "SDL/SDL_image.h"
+#include "SDL.h"
+#include "SDL_image.h"
 #include "Timer.h"
 #include "Particle.h"
 #include "Dot.h"
 #include <string>
 #include <cstdlib>
+#include "block.h"
+#define PI 3.14159265
 
 //The surfaces
-//const int SCREEN_WIDTH = 640;
-//const int SCREEN_HEIGHT = 480;
+
 const int SCREEN_BPP = 32;
 
 //The frame rate
@@ -72,10 +73,14 @@ int main( int argc, char* args[] )
 
     //The dot that will be used
     Dot myDot(screen);
-
+    SDL_Surface *block_image = load_image("block.png");
+    Block *block = new Block(200,200,100,25,block_image,screen,&myDot);
+    Block *block2 = new Block(300,225,100,25,block_image,screen,&myDot);
+    block2->life =3;
     //While the user hasn't quit
     while( quit == false )
     {
+
         //Start the frame timer
         fps.start();
 
@@ -96,12 +101,34 @@ int main( int argc, char* args[] )
         //Move the dot
         myDot.move();
 
+
+        if (block != 0){
+        block->logic();
+        if (block->life <= 0){
+            delete block;
+            block = 0;
+        }
+        }
+        if (block2 != 0){
+        block2->logic();
+        if (block2->life <= 0){
+            delete block2;
+            block2 = 0;
+        }
+        }
+
+
         //Fill the screen white
         SDL_FillRect( screen, &screen->clip_rect, SDL_MapRGB( screen->format, 0xFF, 0xFF, 0xFF ) );
 
         //Show the dot on the screen
         myDot.show();
-
+        if (block != 0){
+        block->show();
+        }
+        if (block2 != 0){
+        block2->show();
+        }
         //Update the screen
         if( SDL_Flip( screen ) == -1 )
         {

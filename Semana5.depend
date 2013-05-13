@@ -41,3 +41,61 @@
 	<string>
 	<cstdlib>
 
+1368408025 source:c:\users\immac\documents\github\semana5\dot.cpp
+	"Dot.h"
+
+1368209348 c:\users\immac\documents\github\semana5\dot.h
+	<cmath>
+	"Utility.h"
+	"Particle.h"
+
+1368208269 c:\users\immac\documents\github\semana5\utility.h
+	"SDL.h"
+	"SDL_image.h"
+	"Timer.h"
+	<string>
+
+1368205136 c:\users\immac\documents\github\semana5\timer.h
+	"SDL.h"
+
+1368205136 c:\users\immac\documents\github\semana5\particle.h
+	"SDL.h"
+	"SDL_image.h"
+	"Utility.h"
+	<string>
+	<cstdlib>
+
+1368472933 source:c:\users\immac\documents\github\semana5\main.cpp
+	"SDL.h"
+	"SDL_image.h"
+	"Timer.h"
+	"Particle.h"
+	"Dot.h"
+	<string>
+	<cstdlib>
+	"block.h"
+
+1368205049 source:c:\users\immac\documents\github\semana5\particle.cpp
+	"Particle.h"
+
+1368205049 source:c:\users\immac\documents\github\semana5\timer.cpp
+	"Timer.h"
+
+1368205049 source:c:\users\immac\documents\github\semana5\utility.cpp
+	"Utility.h"
+
+1368473303 source:c:\users\immac\documents\github\semana5\block.cpp
+	"block.h"
+
+1368472418 c:\users\immac\documents\github\semana5\block.h
+	"SDL.h"
+	"SDL_image.h"
+	"Utility.h"
+	"Dot.h"
+
+1368464640 source:c:\users\immac\documents\github\semana5\paddle.cpp
+	"paddle.h"
+
+1368465051 c:\users\immac\documents\github\semana5\paddle.h
+	"block.h"
+

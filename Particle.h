@@ -1,8 +1,8 @@
 #ifndef PARTICLE_H
 #define PARTICLE_H
 
-#include "SDL/SDL.h"
-#include "SDL/SDL_image.h"
+#include "SDL.h"
+#include "SDL_image.h"
 #include "Utility.h"
 #include <string>
 #include <cstdlib>
