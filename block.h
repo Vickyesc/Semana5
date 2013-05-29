@@ -28,17 +28,20 @@ class Block
         Block();
         float x, y;
         int life;
+        int time;
         int width,height;
         SDL_Surface *image;
         SDL_Surface *screen;
         Dot *dot;
+        float xVel;
+        float yVel;
         Block(float x, float y, int width, int height,
               SDL_Surface *image, SDL_Surface *screen,
               Dot *dot);
         int collisionType();
         bool isPointInside(float pointX, float pointY);
         void show();
-        void logic();
+        virtual void logic();
 
         virtual ~Block();
     protected:

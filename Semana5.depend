@@ -99,3 +99,98 @@
 1368465051 c:\users\immac\documents\github\semana5\paddle.h
 	"block.h"
 
+1369420573 source:c:\users\dell\documents\github\semana5\block.cpp
+	"block.h"
+
+1369432365 c:\users\dell\documents\github\semana5\block.h
+	"SDL.h"
+	"SDL_image.h"
+	"Utility.h"
+	"Dot.h"
+
+1368814893 c:\users\dell\documents\github\semana5\utility.h
+	"SDL.h"
+	"SDL_image.h"
+	"Timer.h"
+	<string>
+
+1368814893 c:\users\dell\documents\github\semana5\timer.h
+	"SDL.h"
+
+1369788136 c:\users\dell\documents\github\semana5\dot.h
+	<cmath>
+	"Utility.h"
+	"Particle.h"
+
+1368814892 c:\users\dell\documents\github\semana5\particle.h
+	"SDL.h"
+	"SDL_image.h"
+	"Utility.h"
+	<string>
+	<cstdlib>
+
+1369792379 source:c:\users\dell\documents\github\semana5\dot.cpp
+	"Dot.h"
+
+1369791206 source:c:\users\dell\documents\github\semana5\main.cpp
+	"SDL.h"
+	"SDL_image.h"
+	"Timer.h"
+	"Particle.h"
+	"Dot.h"
+	<string>
+	<cstdlib>
+	"block.h"
+	"BlockSlow.h"
+	<list>
+	"paddle.h"
+	"ZombieBlocks.h"
+	"superBlock.h"
+	"ghostBlock.h"
+
+1369433452 source:c:\users\dell\documents\github\semana5\paddle.cpp
+	"paddle.h"
+
+1369432740 c:\users\dell\documents\github\semana5\paddle.h
+	"block.h"
+
+1368814892 source:c:\users\dell\documents\github\semana5\particle.cpp
+	"Particle.h"
+
+1368814893 source:c:\users\dell\documents\github\semana5\timer.cpp
+	"Timer.h"
+
+1368814893 source:c:\users\dell\documents\github\semana5\utility.cpp
+	"Utility.h"
+
+1369789727 source:c:\users\dell\documents\github\semana5\blockslow.cpp
+	"BlockSlow.h"
+
+1369420573 c:\users\dell\documents\github\semana5\blockslow.h
+	"block.h"
+
+1369415540 source:c:\users\dell\documents\github\semana5\blocknormal.cpp
+	"BlockNormal.h"
+
+1369415540 c:\users\dell\documents\github\semana5\blocknormal.h
+	"block.h"
+
+1369436273 c:\users\dell\documents\github\semana5\zombieblocks.h
+	"block.h"
+
+1369791359 source:c:\users\dell\documents\github\semana5\zombieblocks.cpp
+	"ZombieBlocks.h"
+	"ZombieBlocks.h"
+
+1369791206 source:c:\users\dell\documents\github\semana5\ghostblock.cpp
+	"ghostBlock.h"
+
+1369791020 c:\users\dell\documents\github\semana5\ghostblock.h
+	"block.h"
+
+1369791020 c:\users\dell\documents\github\semana5\superblock.h
+	"block.h"
+
+1369791206 source:c:\users\dell\documents\github\semana5\superblock.cpp
+	"superBlock.h"
+

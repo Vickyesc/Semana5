@@ -21,6 +21,8 @@ this->dot = dot;
 this->isColliding = false;
 this->wasColliding = false;
 this->life = 2;
+this->time=0;
+
 }
 
 void Block::show(){
@@ -33,7 +35,7 @@ void Block::logic(){
   //  int dotHeight = dot->y + dot->DOT_HEIGHT;
 
 
-
+    this->time++;
 
 
         int collision = collisionType();
@@ -49,7 +51,7 @@ void Block::logic(){
             break;
         case BOT:
             dot->angle = -dot->angle;
-            dot->angle += rand()%10 - 20;
+            dot->angle += rand()%10 -20;
             this->life--;
             break;
 
@@ -65,7 +67,7 @@ void Block::logic(){
              this->life--;
              break;
         case CORNERUR:
-            dot->velocity = abs(dot->velocity);
+             dot->velocity = abs(dot->velocity);
              dot->angle = 225;
              dot->angle += rand()%5-10;
              this->life--;
@@ -82,6 +84,7 @@ void Block::logic(){
              dot->angle += rand()%5-10;
              this->life--;
         }
+
 
         }
 

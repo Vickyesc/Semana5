@@ -33,6 +33,72 @@ Dot::Dot(SDL_Surface *screen)
     }
 }
 
+void Dot::ghostDot(){
+    red = load_image( "red.bmp" );
+    green = load_image( "green.bmp" );
+    blue = load_image( "blue.bmp" );
+
+    //Set alpha
+    SDL_SetAlpha( red, SDL_SRCALPHA | SDL_RLEACCEL, 192 );
+    SDL_SetAlpha( blue, SDL_SRCALPHA | SDL_RLEACCEL, 192 );
+    SDL_SetAlpha( green, SDL_SRCALPHA | SDL_RLEACCEL, 192 );
+
+    dot = load_image( "sperDot.png" );
+
+    this->screen=screen;
+    //Initialize the offsets
+    x = SCREEN_WIDTH/2;
+    y = SCREEN_HEIGHT-20;
+
+    angle = 100;
+    velocity = 10;
+
+    //Initialize particles
+    for( int p = 0; p < TOTAL_PARTICLES; p++ )
+    {
+        switch( rand() % 3 )
+        {
+            case 0: particles[ p ] = new Particle( x, y, screen,red); break;
+            case 1: particles[ p ] = new Particle( x, y, screen,green); break;
+            case 2: particles[ p ] = new Particle( x, y, screen,blue); break;
+        }
+    }
+}
+
+void Dot::superDot(){
+
+  red = load_image( "red.bmp" );
+    green = load_image( "green.bmp" );
+    blue = load_image( "blue.bmp" );
+
+    //Set alpha
+    SDL_SetAlpha( red, SDL_SRCALPHA | SDL_RLEACCEL, 192 );
+    SDL_SetAlpha( blue, SDL_SRCALPHA | SDL_RLEACCEL, 192 );
+    SDL_SetAlpha( green, SDL_SRCALPHA | SDL_RLEACCEL, 192 );
+
+    dot = load_image( "superDot.png" );
+
+    this->screen=screen;
+    //Initialize the offsets
+   x = SCREEN_WIDTH/2;
+    y = SCREEN_HEIGHT-20;
+
+    angle = 100;
+    velocity = 3;
+
+    //Initialize particles
+    for( int p = 0; p < TOTAL_PARTICLES; p++ )
+    {
+        switch( rand() % 3 )
+        {
+            case 0: particles[ p ] = new Particle( x, y, screen,red); break;
+            case 1: particles[ p ] = new Particle( x, y, screen,green); break;
+            case 2: particles[ p ] = new Particle( x, y, screen,blue); break;
+        }
+    }
+
+}
+
 Dot::~Dot()
 {
     //Delete particles

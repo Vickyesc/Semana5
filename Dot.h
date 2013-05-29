@@ -51,6 +51,8 @@ class Dot
 
     //Shows the dot
     void show();
+    void ghostDot();
+    void superDot();
 };
 
 #endif // DOT_H

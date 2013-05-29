@@ -1,14 +1,11 @@
-#include "paddle.h"
+#include "BlockNormal.h"
 
-Paddle::Paddle()
+BlockNormal::BlockNormal()
 {
     //ctor
 }
 
-Paddle::Paddle(float x, float y, int width, int height,
-              SDL_Surface *image, SDL_Surface *screen,
-              Dot *dot,SDL_Event *event){
-
+BlockNormal::BlockNormal(float x, float y, int width, int height,SDL_Surface *image,SDL_Surface *screen, Dot *dot){
 this->x = x;
 this->y = y;
 this->width = width;
@@ -18,44 +15,16 @@ this->image = image;
 this->dot = dot;
 this->isColliding = false;
 this->wasColliding = false;
-this->life = 100;
-this->event = event;
-
-
+this->life = 2;
 }
 
-Paddle::~Paddle()
+BlockNormal::~BlockNormal()
 {
     //dtor
 }
 
-void Paddle::handleInput(){
-     //Get the keystates
-    Uint8 *keystate = SDL_GetKeyState(NULL);
-        this->xVel = 0;
-    if ( keystate[SDLK_RIGHT] )
-        this->xVel = 10;
-    if ( keystate[SDLK_LEFT] )
-        this-> xVel = -10;
-    if ( keystate[SDLK_LEFT] && keystate [SDLK_RIGHT] )
-        this->xVel = 0;
-
-}
-
-void Paddle::logic(){
-
-if( ( this->x < 0 ) )
-    {
-
-    this-> x = 0;
-    } else if ( ( x + this->width > SCREEN_WIDTH)){
-
-    this->x = SCREEN_WIDTH-this->width;
-    } else if(this-> x + this->width < 0){
-    this->x = SCREEN_WIDTH;
-    } else if(this->x + this->width > SCREEN_WIDTH + this->width){
-    this->x = 0;
-    }
+void BlockNormal::logic(){
+  //  int dotHeight = dot->y + dot->DOT_HEIGHT;
 
         int collision = collisionType();
         if(!wasColliding){
@@ -74,6 +43,11 @@ if( ( this->x < 0 ) )
             this->life--;
             break;
 
+        case RIGHT: case LEFT:
+            dot->angle = -dot->angle+180;
+            dot->angle += rand()%10 - 20;
+            this->life--;
+            break;
          case CORNERUL:
              dot->velocity = abs(dot->velocity);
              dot->angle = 315;
@@ -100,8 +74,6 @@ if( ( this->x < 0 ) )
         }
 
         }
-
-this->x += this->xVel;
 
 }
 
